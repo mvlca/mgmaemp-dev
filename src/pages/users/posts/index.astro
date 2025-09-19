@@ -3,7 +3,6 @@ import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 import Layout from "../../../layouts/AtSectionLayout.astro";
 import Date from "../../../components/TimeCompo.astro";
-const { title, description, pubDate } = Astro.props;
 const posts = (await getCollection('posts')).sort(
     (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 )
