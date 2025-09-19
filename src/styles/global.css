@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    overflow-wrap: break-word;
+    font-family: sans-serif;
+}
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+}
+body {
+    font-size: 1.25rem;
+}
+main {
+    width: 100%;
+    min-height: 100vh;
+    color: #3f3f3f;
+    line-height: 1.8;
+}
+main p, main table, main h1, main h2, main h3, main h4, main h5, main h6 {
+    margin-bottom: 1rem;
+}
+main ul, main ol {
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+}
+/* Header Font Size */
+h1{font-size:2.25rem;}
+h2{font-size:2rem;}
+h3{font-size:1.75rem;}
+h4{font-size:1.5rem;}
+h5{font-size:1.38rem;}
+h6{font-size:1.25rem;}
+/* Common Used CSS */
+.tar{text-align:right;} /* text-align: right */
+.lh5{line-height:1.5;} /* line-height: 1.5 */
+.lh8{line-height:1.8;} /* line-height: 1.8 */
+.fo1{order:1;} /* flex order */
+.fo2{order:2;} /* flex order */
+.fo3{order:3;} /* flex order */
+.fo4{order:4;} /* flex order */
+.fo5{order:5;} /* flex order */
+.fo6{order:6;} /* flex order */
+.mt1{margin-top:1rem;} /* margin-top: 1rem */
+.mt2{margin-top:2rem;} /* margin-top: 2rem */
+.mt3{margin-top:3rem;} /* margin-top: 3rem */
+.mb1{margin-bottom:1rem;} /* margin-bottom: 1rem */
+.mb2{margin-bottom:2rem;} /* margin-bottom: 2rem */
+.mb3{margin-bottom:3rem;} /* margin-bottom: 3rem */
+
+@media screen and (max-width: 1000px) {
+    header {
+        position: unset;
+        top: unset;
+        left: unset;
+        z-index: unset;
+    }
+}

@@ -1,0 +1,27 @@
+---
+import Head from "../components/HeadCompo.astro";
+import Header from "../components/HeaderCompo.astro";
+import Footer from "../components/FooterCompo.astro";
+import Page from "../components/PageCompo.astro";
+const { title, description, pubDate } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <Head title={title} description={description} />
+</head>
+<body>
+    <header>
+        <Header />
+    </header>
+    <main>
+        <Page date={pubDate}>
+            <slot />
+        </Page>
+    </main>
+    <footer>
+        <Footer />
+    </footer>
+</body>
+</html>

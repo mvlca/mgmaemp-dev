@@ -1,0 +1,36 @@
+---
+import Aside from "./AsideCompo.astro";
+import Back from "./BackCompo.astro";
+---
+<div class="page-outer">
+    <div class="page-inner">
+        <aside>
+            <Aside />
+        </aside>
+        <div class="page-body">
+            <Back />
+            <slot />
+        </div>
+    </div>
+</div>
+<style>
+    .page-outer {
+        width: 100%;
+        padding: 3.5rem 0 2rem 0;
+    }
+    .page-inner {
+        width: 900px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    aside {
+        flex: 0 0 20%;
+        padding-right: 1rem;
+        border-right: 1px solid #ddd;
+    }
+    .page-body {
+        flex: 0 0 75%;
+    }
+</style>

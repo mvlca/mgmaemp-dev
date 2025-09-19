@@ -1,0 +1,21 @@
+---
+import Back from "./BackCompo.astro";
+---
+<div class="section-outer">
+    <div class="section-inner">
+        <section class="section-body">
+            <Back />
+            <slot />
+        </section>
+    </div>
+</div>
+<style>
+    .section-outer {
+        width: 100%;
+        padding: 3.5rem 0 2rem 0;
+    }
+    .section-inner {
+        width: 900px;
+        margin: auto;
+    }
+</style>

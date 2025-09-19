@@ -1,0 +1,21 @@
+---
+const { pathname } = Astro.url;
+const parts = pathname.split("/").filter(Boolean);
+// const parent = "/" + parts.slice(0, -1).join("/") + "/";
+let parent = "/" + parts.slice(0, -1).join("/");
+if (!parent.endsWith("/")) {
+    parent += "/";
+}
+---
+<div class="go-back">
+    <a href={parent}><i class="fa-solid fa-arrow-left"></i> Back</a>
+</div>
+<style>
+    .go-back a {
+        display: inline-block;
+        padding: 0.5rem 0;
+        text-decoration: none;
+        font-size: 1rem;
+        color: #339;
+    }
+</style>

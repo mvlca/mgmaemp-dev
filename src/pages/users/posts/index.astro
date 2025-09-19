@@ -1,0 +1,27 @@
+---
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+import Layout from "../../../layouts/AtSectionLayout.astro";
+import Date from "../../../components/TimeCompo.astro";
+const { title, description, pubDate } = Astro.props;
+const posts = (await getCollection('posts')).sort(
+    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+)
+---
+
+<Layout>
+    <article>
+        {
+            posts.map((post) => (
+                <a href={`/users/posts/${post.id}`}>
+                    {post.data.heroImage && (
+                        <Image width={720} height={360} src={post.data.heroImage} alt="" />
+                    )}
+                    <h3>{post.data.title}</h3>
+                    <Date date={post.data.pubDate} />
+                    <p>{post.data.description}</p>
+                </a>
+            ))
+        }
+    </article>
+</Layout>

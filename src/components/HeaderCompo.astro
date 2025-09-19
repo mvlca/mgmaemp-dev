@@ -1,0 +1,22 @@
+---
+import "../styles/header.css";
+import HeaderLink from "../components/HeaderLinkCompo.astro";
+---
+<div class="header-outer">
+    <div class="header-inner">
+        <nav class="header-nav">
+            <a href="/" class="mgmaemp-logo">MGMAemp</a>
+            <div id="menu-toggle"><i class="fa-solid fa-bars"></i></div>
+            <div class="menu-links">
+                <HeaderLink href="#">Services</HeaderLink>
+                <HeaderLink href="#">Trainings</HeaderLink>
+                <HeaderLink href="#">Register</HeaderLink>
+                <HeaderLink href="/about">About</HeaderLink>
+                <HeaderLink href="/users/">Login</HeaderLink>
+                <HeaderLink href="#"><i class="fa-solid fa-search"></i></HeaderLink>
+            </div>
+        </nav>
+    </div>
+</div>
+
+<script src="../scripts/header.js"></script>

@@ -3,13 +3,19 @@ import { defineConfig } from 'astro/config';
 
 import cloudflare from '@astrojs/cloudflare';
 
+import mdx from "@astrojs/mdx";
+
 // https://astro.build/config
 export default defineConfig({
-  adapter: cloudflare({
-    platformProxy: {
-      enabled: true
-    },
+  site: "https://emp.mgmavlca.com/",
 
-    imageService: "cloudflare"
-  })
+  adapter: cloudflare({
+      platformProxy: {
+          enabled: true
+      },
+
+      imageService: "cloudflare"
+  }),
+
+  integrations: [mdx()]
 });

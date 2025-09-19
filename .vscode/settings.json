@@ -1,5 +1,12 @@
 {
 	"files.associations": {
 		"wrangler.json": "jsonc"
-	}
+	},
+	"cSpell.words": [
+		"fontawesome",
+		"frontmatter",
+		"MGMA",
+		"mgmaemp",
+		"vlca"
+	]
 }

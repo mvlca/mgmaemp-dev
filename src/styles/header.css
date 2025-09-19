@@ -1,0 +1,84 @@
+.header-outer {
+    width: 100%;
+    background-color: #ddd;
+}
+.header-inner {
+    width: 95%;
+    margin: auto;
+}
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-nav a {
+    text-decoration: none;
+    display: inline-block;
+}
+.mgmaemp-logo {
+    color: #339;
+    font-size: 1.5rem;
+    font-weight: 600;
+    position: relative;
+    line-height: 1;
+    padding-bottom: 0.5rem;
+}
+.mgmaemp-logo::after {
+    content: '';
+    width: 100%;
+    height: 0.25rem;
+    background-color: #339;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+#menu-toggle {
+    display: none;
+}
+.menu-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+.menu-links a {
+    color: #555;
+    padding: 1rem 0;
+}
+.menu-links a:hover {
+    color: #111;
+}
+.menu-links a.active {
+    color: #111;
+}
+
+@media screen and (max-width: 1000px) {
+    .header-outer {
+        height: unset;
+    }
+    .header-inner {
+        padding: 0.5rem 0;
+    }
+    .header-nav {
+        flex-wrap: wrap;
+    }
+    #menu-toggle {
+        display: block;
+        padding: 6px;
+        border: 1px solid #bbb;
+        border-radius: 3px;
+        margin-right: 0.5rem;
+    }
+    .menu-links {
+        display: none;
+        flex: 0 0 100%;
+        padding: 1rem 0;
+    }
+    .menu-links a {
+        display: block;
+        padding: 1rem;
+        border-bottom: 1px solid #bbb;
+    }
+    .menu-links a:first-child {
+        border-top: 1px solid #bbb;
+    }
+}
