@@ -5,6 +5,7 @@
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
 	"name": "emp",
+	"account_id": "b91a235ce0173bee0c4c9dfee7af4a26",
 	"main": "./dist/_worker.js/index.js",
 	"compatibility_date": "2025-09-13",
 	"compatibility_flags": [

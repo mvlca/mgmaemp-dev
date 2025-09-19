@@ -10,18 +10,43 @@ const posts = (await getCollection('posts')).sort(
 ---
 
 <Layout>
-    <article>
+    <section>
         {
             posts.map((post) => (
                 <a href={`/users/posts/${post.id}`}>
-                    {post.data.heroImage && (
-                        <Image width={720} height={360} src={post.data.heroImage} alt="" />
-                    )}
-                    <h3>{post.data.title}</h3>
-                    <Date date={post.data.pubDate} />
-                    <p>{post.data.description}</p>
+                    <article>
+                        <h3>{post.data.title}</h3>
+                        <Date date={post.data.pubDate} />
+                        {post.data.heroImage && (
+                            <Image width={720} height={360} src={post.data.heroImage} alt="" />
+                        )}
+                        <p>{post.data.description}</p>
+                    </article>
                 </a>
             ))
         }
-    </article>
+    </section>
 </Layout>
+
+<style>
+    section a {
+        text-decoration: none;
+        color: #339;
+    }
+    a article {
+        border: 1px solid #ddd;
+        border-radius: 1rem;
+        margin-bottom: 2rem;
+        padding: 1rem;
+        box-shadow: 3px 3px 3px gray;
+    }
+    a article h3 {
+        margin-bottom: unset;
+    }
+    a article img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+</style>
