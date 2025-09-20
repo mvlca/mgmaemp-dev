@@ -16,7 +16,7 @@ import Back from "./BackCompo.astro";
 <style>
     .page-outer {
         width: 100%;
-        padding: 3.5rem 0 2rem 0;
+        padding: 5rem 0 2rem 0;
     }
     .page-inner {
         width: 900px;
@@ -32,5 +32,24 @@ import Back from "./BackCompo.astro";
     }
     .page-body {
         flex: 0 0 75%;
+    }
+    @media screen and (max-width: 900px) {
+        .page-outer {
+            padding: 2rem 0;
+        }
+        .page-inner {
+            width: 100%;
+            padding: 0 2rem;
+        }
+        aside, .page-body {
+            flex: 0 0 100%;
+        }
+        aside {
+            order: 2;
+            border-right: unset;
+            margin-top: 2rem;
+            border-top: 1px solid lightgray;
+            padding: 1rem 0;
+        }
     }
 </style>
