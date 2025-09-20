@@ -3,9 +3,7 @@ import Head from "../components/HeadCompo.astro";
 import Header from "../components/HeaderCompo.astro";
 import Footer from "../components/FooterCompo.astro";
 import Section from "../components/SectionCompo.astro";
-import FormattedDate from "../components/TimeCompo.astro";
-const { title, description, pubDate } = Astro.props;
-const d = pubDate instanceof Date ? pubDate : new Date(pubDate);
+const { title, description } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -19,8 +17,6 @@ const d = pubDate instanceof Date ? pubDate : new Date(pubDate);
     </header>
     <main>
         <Section>
-            <h2>{title}</h2>
-            <FormattedDate date={d} />
             <slot />
         </Section>
     </main>

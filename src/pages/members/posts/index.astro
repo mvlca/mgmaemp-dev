@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
-import Layout from "../../../layouts/AtSectionLayout.astro";
+import Layout from "../../../layouts/AtPlainLayout.astro";
 import Date from "../../../components/TimeCompo.astro";
 const posts = (await getCollection('posts')).sort(
     (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
@@ -12,7 +12,7 @@ const posts = (await getCollection('posts')).sort(
     <section>
         {
             posts.map((post) => (
-                <a href={`/users/posts/${post.id}`}>
+                <a href={`/members/posts/${post.id}`}>
                     <article>
                         <h3>{post.data.title}</h3>
                         <Date date={post.data.pubDate} />

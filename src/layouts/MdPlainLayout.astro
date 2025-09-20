@@ -1,10 +1,11 @@
 ---
 import Head from "../components/HeadCompo.astro";
 import Header from "../components/HeaderCompo.astro";
+import FormattedDate from "../components/TimeCompo.astro";
 import Footer from "../components/FooterCompo.astro";
 import Section from "../components/SectionCompo.astro";
-import FormattedDate from "../components/TimeCompo.astro";
-const { title, description, pubDate } = Astro.props;
+const { frontmatter } = Astro.props;
+const { title, description, pubDate } = frontmatter;
 const d = pubDate instanceof Date ? pubDate : new Date(pubDate);
 ---
 

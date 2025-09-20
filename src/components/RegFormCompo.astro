@@ -1,0 +1,89 @@
+<div class="emp-form-container">
+    <h2>Registration Form</h2>
+    <form id="registerForm" action="https://docs.google.com/forms/d/e/1FAIpQLSfwjpQwYKgJXaQhc558rP1DBweeAirUP5aFhGJIqct_KpWUMA/formResponse" target="_blank">
+        <button type="reset" class="resetBtn">Reset All</button>
+        <div class="label-input">
+            <label for="entry.2093829040">Name:&ensp;<span class="required">&ast;</span></label>
+            <input type="text" name="entry.2093829040" placeholder="Name" required autocomplete="off"/>
+        </div>
+        <div class="label-input">
+            <label for="entry.1650276213">Factory/Company Name:</label>
+            <input type="text" name="entry.1650276213" placeholder="Factory/Company Name" autocomplete="off"/>
+        </div>
+        <div class="label-input">
+            <label for="entry.997791600">Phone No. (1):&ensp;<span class="required">&ast;</span></label>
+            <input type="text" name="entry.997791600" placeholder="Phone No." required autocomplete="off"/>
+        </div>
+        <div class="label-input">
+            <label for="entry.1697690310">Phone No. (2):</label>
+            <input type="text" name="entry.1697690310" placeholder="Phone No. (optional)" autocomplete="off"/>
+        </div>
+        <div class="label-input">
+            <label for="entry.614870906">Gmail (1):&ensp;<span class="required">&ast;</span></label>
+            <input type="text" name="entry.614870906" placeholder="Gmail Address" required autocomplete="off"/>
+        </div>
+        <div class="label-input">
+            <label for="entry.2098673559">Gmail (2):</label>
+            <input type="text" name="entry.2098673559" placeholder="Gmail Address (optional)" autocomplete="off"/>
+        </div>
+        <div class="label-input">
+            <label for="entry.97517160">Gmail (3):</label>
+            <input type="text" name="entry.97517160" placeholder="Gmail Address (optional)" autocomplete="off"/>
+        </div>
+        <div class="label-input-hidden">
+            <input type="text" name="entry.261403839" value="4" />
+            <input type="text" name="entry.1009810161" value="mgma@EmpServices" autocomplete="off"/>
+        </div>
+        <button type="submit" id="submitReg">Submit</button>
+    </form>
+</div>
+<style>
+    .label-input {
+        margin: 1rem 0;
+    }
+    .label-input label,
+    .label-input input {
+        display: block;
+    }
+    .label-input label .required {
+        color: red;
+    }
+    .label-input input {
+        width: 100%;
+        padding: 6px;
+        font-size: 1rem;
+    }
+    .label-input-hidden {
+        display: none;
+    }
+    .resetBtn {
+        display: inline-block;
+        float: right;
+        background-color: red;
+        color: #eee;
+        font-size: 0.75rem;
+        font-weight: 600;
+        padding: 0.25rem 0.5rem;
+        border: 0;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+    .resetBtn:hover {
+        background-color: #555;
+    }
+    #submitReg {
+        display: block;
+        background-color: #339;
+        color: #eee;
+        font-size: 1rem;
+        font-weight: 600;
+        padding: 0.5rem 1rem;
+        border: 0;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+    #submitReg:hover {
+        background-color: #555;
+    }
+</style>
+<script src="../scripts/registration-form.js"></script>
